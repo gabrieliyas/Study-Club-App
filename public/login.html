@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
     />
     <link rel="stylesheet" href="css/loginstyle.css" />
-    <title>Halaman Login</title>
+    <title>Daftar/Masuk</title>
   </head>
 
   <body>
@@ -39,15 +39,15 @@
             ></a>
           </div>
           <span>atau gunakan pos-el Anda untuk registrasi</span>
-          <input type="text" placeholder="Nama" />
-          <input type="email" placeholder="Pos-el" />
-          <input type="password" placeholder="Kata Sandi" />
-          <div class="alert alert-warning" role="alert" id="error" style="display: none;"></div>
-          <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
+          <input type="text" id="register-name" placeholder="Nama" required />
+          <input type="email" id="register-email" placeholder="Pos-el" required />
+          <input type="password" id="register-password" placeholder="Kata Sandi" required />
+          <div class="alert alert-warning" role="alert" id="register-error" style="display: none;"></div>
+          <div class="alert alert-success" role="alert" id="register-success" style="display: none;"></div>
           <button>Daftar</button>
         </form>
       </div>
-      <script src = "js/loginscript.js"></script>
+      
       <div class="form-container sign-in">
         <form>
           <h1>Masuk</h1>
@@ -73,14 +73,15 @@
             ></a>
           </div>
           <span>atau gunakan pos-el dan kata sandi Anda</span>
-          <input type="email" placeholder="Pos-el" />
-          <input type="password" placeholder="Kata Sandi" />
+          <input type="email" id="login-email" placeholder="Pos-el" required />
+          <input type="password" id="login-password" placeholder="Kata Sandi" required />
           <a href="#">Lupa Kata Sandi?</a>
-          <div class="alert alert-warning" role="alert" id="error" style="display: none;"></div>
-          <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
+          <div class="alert alert-warning" role="alert" id="login-error" style="display: none;"></div>
+          <div class="alert alert-success" role="alert" id="login-success" style="display: none;"></div>
           <button>Masuk</button>
         </form>
       </div>
+      
       <div class="toggle-container">
         <div class="toggle">
           <div class="toggle-panel toggle-left">
