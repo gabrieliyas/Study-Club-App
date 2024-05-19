@@ -40,7 +40,7 @@ loginBtn.addEventListener("click", () => {
 
   fetch("/api/login", {
     metdho: "POST",
-    body: JSON.stringify(register),
+    body: JSON.stringify(login),
     headers: {
       "Content-Type": "application/json"
     }
