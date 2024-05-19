@@ -42,10 +42,12 @@
           <input type="text" placeholder="Nama" />
           <input type="email" placeholder="Pos-el" />
           <input type="password" placeholder="Kata Sandi" />
-          <div class="alert alert-warning" role="alert" id="error"></div>
+          <div class="alert alert-warning" role="alert" id="error" style="display: none;"></div>
+          <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
           <button>Daftar</button>
         </form>
       </div>
+      <script src = "js/loginscript.js"></script>
       <div class="form-container sign-in">
         <form>
           <h1>Masuk</h1>
@@ -74,6 +76,8 @@
           <input type="email" placeholder="Pos-el" />
           <input type="password" placeholder="Kata Sandi" />
           <a href="#">Lupa Kata Sandi?</a>
+          <div class="alert alert-warning" role="alert" id="error" style="display: none;"></div>
+          <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
           <button>Masuk</button>
         </form>
       </div>
@@ -95,7 +99,6 @@
         </div>
       </div>
     </div>
-
     <script src="js/loginscript.js"></script>
   </body>
 </html>
