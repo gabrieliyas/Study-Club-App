@@ -1,105 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="png"
+      href="../public/images/logo baru hima.png"
+    />
+    <title>Login SignUp</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+      type="text/css"
+      href="../public/css/loginStyle.css"
     />
-    <link rel="stylesheet" href="css/loginstyle.css" />
-    <title>Daftar/Masuk</title>
-  </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- It will redirect to the Home Page after submitting the form -->
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function () {
+          alert("Great Job !");
+        });
+      });
+    </script>
+  </head>
   <body>
-    <div class="container" id="container">
-      <div class="form-container sign-up">
-        <form>
-          <h1>Buat Akun</h1>
-          <div class="social-icons">
-            <a href="#" class="icon"
-              ><img src="images/icon/google.png" style="width: 30px" /><i
-                class="fa-brands fa-google-plus-g"
-              ></i
-            ></a>
-            <a href="#" class="icon"
-              ><img src="images/icon\fb.png" style="width: 30px" /><i
-                class="fa-brands fa-facebook-f"
-              ></i
-            ></a>
-            <a href="#" class="icon"
-              ><img src="images/icon/GitHubbb.png" style="width: 30px" /><i
-                class="fa-brands fa-github"
-              ></i
-            ></a>
-            <a href="#" class="icon"
-              ><img src="images/icon/LinkedInnn.png" style="width: 30px" /><i
-                class="fa-brands fa-linkedin-in"
-              ></i
-            ></a>
-          </div>
-          <span>atau gunakan pos-el Anda untuk registrasi</span>
-          <input type="text" id="register-name" placeholder="Nama" required />
-          <input type="email" id="register-email" placeholder="Pos-el" required />
-          <input type="password" id="register-password" placeholder="Kata Sandi" required />
-          <div class="alert alert-warning" role="alert" id="register-error" style="display: none;"></div>
-          <div class="alert alert-success" role="alert" id="register-success" style="display: none;"></div>
-          <button>Daftar</button>
-        </form>
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button
+          type="button"
+          class="toggle-btn"
+          id="log"
+          onclick="login()"
+          style="color: #fff"
+        >
+          Log In
+        </button>
+        <button type="button" class="toggle-btn" id="reg" onclick="register()">
+          Register
+        </button>
       </div>
-      
-      <div class="form-container sign-in">
-        <form>
-          <h1>Masuk</h1>
-          <div class="social-icons">
-            <a href="#" class="icon"
-              ><i class="fa-brands fa-google-plus-g"
-                ><img src="images/icon/Googleee.png" style="width: 30px" /></i
-            ></a>
-            <a href="#" class="icon"
-              ><img src="images/icon\fb.png" style="width: 30px" /><i
-                class="fa-brands fa-facebook-f"
-              ></i
-            ></a>
-            <a href="#" class="icon"
-              ><img src="images/icon/GitHubbb.png" style="width: 30px" /><i
-                class="fa-brands fa-github"
-              ></i
-            ></a>
-            <a href="#" class="icon"
-              ><img src="images/icon/LinkedInnn.png" style="width: 30px" /><i
-                class="fa-brands fa-linkedin-in"
-              ></i
-            ></a>
-          </div>
-          <span>atau gunakan pos-el dan kata sandi Anda</span>
-          <input type="email" id="login-email" placeholder="Pos-el" required />
-          <input type="password" id="login-password" placeholder="Kata Sandi" required />
-          <a href="#">Lupa Kata Sandi?</a>
-          <div class="alert alert-warning" role="alert" id="login-error" style="display: none;"></div>
-          <div class="alert alert-success" role="alert" id="login-success" style="display: none;"></div>
-          <button>Masuk</button>
-        </form>
+      <div class="social-icons">
+        <img src="images/icon/fb2.png" />
+        <img src="images/icon/insta2.png" />
+        <img src="images/icon/tt2.png" />
       </div>
-      
-      <div class="toggle-container">
-        <div class="toggle">
-          <div class="toggle-panel toggle-left">
-            <h1>Selamat Datang Kembali!</h1>
-            <p>Masukkan detail pribadi Anda untuk menggunakan semua fitur situs</p>
-            <button class="hidden" id="login">Masuk</button>
-          </div>
-          <div class="toggle-panel toggle-right">
-            <h1>Halo, Eduzen!</h1>
-            <p>
-              <!-- Register with your personal details to use all of site features -->
-              Daftar dengan data pribadi Anda untuk menggunakan semua fitur situs 
-            </p>
-            <button class="hidden" id="register">Daftar</button>
-          </div>
+
+      <!-- Login Form -->
+      <form id="login" class="input-group" action="index.html">
+        <div class="inp">
+          <img src="images/icon/user.png" /><input
+            type="text"
+            id="email"
+            class="input-field"
+            placeholder="Username or Phone Number"
+            style="width: 88%; border: none"
+            required="required"
+          />
         </div>
+        <div class="inp">
+          <img src="images/icon/password.png" /><input
+            type="password"
+            id="password"
+            class="input-field"
+            placeholder="Password"
+            style="width: 88%; border: none"
+            required="required"
+          />
+        </div>
+        <input type="checkbox" class="check-box" />Remember Password
+        <button type="submit" class="submit-btn">Log In</button>
+      </form>
+
+      <div class="other" id="other">
+        <div class="instead">
+          <h3>or</h3>
+        </div>
+        <button class="connect" onclick="google()">
+          <img src="images/icon/google.png" /><span>Sign in with Google</span>
+        </button>
       </div>
+
+      <!-- Registration Form -->
+      <form id="register" class="input-group">
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Full Name"
+          required="required"
+        />
+        <input
+          type="email"
+          class="input-field"
+          placeholder="Email Address"
+          required="required"
+        />
+        <input
+          type="password"
+          class="input-field"
+          placeholder="Create Password"
+          name="psame"
+          required="required"
+        />
+        <input
+          type="password"
+          class="input-field"
+          placeholder="Confirm Password"
+          name="psame"
+          required="required"
+        />
+        <input
+          type="checkbox"
+          class="check-box"
+          id="chkAgree"
+          onclick="goFurther()"
+        />I agree to the Terms & Conditions
+        <button type="submit" id="btnSubmit" class="submit-btn reg-btn">
+          Register
+        </button>
+      </form>
     </div>
-    <script src="js/loginscript.js"></script>
+    <script type="text/javascript" src="../public/js/script.js"></script>
   </body>
 </html>

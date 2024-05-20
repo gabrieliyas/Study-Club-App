@@ -52,9 +52,9 @@ nav ul li a {
   text-decoration: none;
 }
 nav ul li a:hover {
-  color: #fff501;
+  color: #ffda78;
   border-radius: 5px;
-  background: #000000;
+  background: #003285;
 }
 
 .srch {
@@ -85,12 +85,12 @@ nav ul li a:hover {
   text-decoration: none;
 
   transition: 0.5s;
-  background-color: #fff501;
-  color: #000000;
+  background-color: #ffda78;
+  color: #003285;
 }
 .get-started:hover {
-  color: #fff501;
-  background: #000000;
+  color: #ffda78;
+  background: #003285;
 }
 .logo img {
   width: 100px;
@@ -370,18 +370,14 @@ button {
   width: 250px;
   padding: 28px;
   border-radius: 10px;
-  border: 1px solid rgba(239, 102, 34, 1);
+  border: 1px solid #ffda78;
   font-size: 15px;
   color: #272529;
   font-family: cursive;
   text-decoration: none;
 }
 .cbox .det a:hover {
-  background: linear-gradient(
-    to right,
-    rgba(239, 102, 34, 1),
-    rgba(12, 64, 121, 1)
-  );
+  background: linear-gradient(to right, #ffda78, #003285);
   color: white;
 }
 .cbox .det a:hover img {
@@ -489,6 +485,7 @@ button {
     url("../images/extra/b3.jpg");
   background-size: cover;
   background-attachment: fixed;
+  margin-top: 150px;
 }
 .service-swipe .s-card img {
   width: 100px;
@@ -510,101 +507,16 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition-duration: 0.5s;
+  margin: 10px;
 }
 .service-swipe .s-card p {
-  color: #f2f2f2;
+  color: #ffda78;
   font-size: 1.2em;
   font-family: "Sora", sans-serif;
 }
 .service-swipe .s-card:hover {
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
   transform: translateY(-10px);
-}
-
-/*Contact Us Section*/
-.csec {
-  background: linear-gradient(
-    to right,
-    rgba(239, 102, 34, 1),
-    rgba(12, 64, 121, 1)
-  );
-  background-attachment: fixed;
-  position: absolute;
-  width: 100%;
-  height: 250px;
-  top: 200px;
-  content: "";
-  transform-origin: top right;
-  transform: skewY(-10deg);
-  z-index: -1;
-}
-.back-contact {
-  margin-top: 0px;
-  transform: translateY(-50px);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.cc {
-  height: 400px;
-  width: 400px;
-  height: 500px;
-  border-radius: 10px;
-  justify-content: center;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
-  background: #fff;
-}
-.cc form {
-  margin: 5%;
-  margin-top: 40px;
-  width: 90%;
-  height: 90%;
-}
-.cc form label {
-  position: absolute;
-  color: #2e3d49;
-  font-size: 10px;
-  font-weight: 800;
-}
-.cc form input {
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: inset 0 0 5px lightgray;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  outline: none;
-  color: #2e3d49;
-  font-weight: 600;
-}
-.imp {
-  color: red;
-}
-form textarea {
-  width: 100%;
-  height: 100px;
-  box-shadow: inset 0 0 5px lightgray;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  outline: none;
-  color: #2e3d49;
-  font-weight: 600;
-  padding: 15px;
-}
-#csubmit {
-  margin-top: 20px;
-  background: linear-gradient(
-    to right,
-    rgba(239, 102, 34, 1),
-    rgba(12, 64, 121, 1)
-  );
-  border-radius: 5px;
-  border-style: none;
-  outline: none;
-  width: 100%;
-  padding: 15px 25px;
-  color: #fff;
-  font-size: 12px;
-  cursor: pointer;
 }
 
 /*REVIEW SECTION*/
@@ -689,21 +601,22 @@ form textarea {
 
 /*FEEDBACK*/
 .title2 {
-  position: relative;
+  position: left;
   margin-top: 150px;
   margin-left: 100px;
+  color: #fff;
 }
 .title2 span {
   font-weight: 700;
   font-family: "Sora", sans-serif;
   font-size: 30px;
-  color: #2e3d49;
+  color: #fff;
 }
 .title2 .shortdesc2 {
   padding: 10px;
   font-family: "Sora", sans-serif;
   font-size: 15px;
-  color: #2e3d49;
+  color: #fff;
   margin-bottom: 10px;
 }
 .feedbox {
@@ -719,9 +632,10 @@ form textarea {
 .feed {
   width: 800px;
   height: 400px;
-  position: relative;
+  position: unset;
   border-radius: 10px;
   justify-content: center;
+  align-items: center;
   box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.6), 0 0 80px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.4);
 }
@@ -753,7 +667,7 @@ form textarea {
   width: 50%;
 }
 .feed form .fname {
-  width: 25%;
+  width: 35%;
 }
 .feed form textarea {
   width: 100%;
@@ -761,11 +675,7 @@ form textarea {
 }
 .feed #csubmit {
   margin-top: 25px;
-  background: linear-gradient(
-    to right,
-    rgba(239, 102, 34, 1),
-    rgba(12, 64, 121, 1)
-  );
+  background: linear-gradient(to right, #ffda78, #003285);
   border-radius: 5px;
   border-style: none;
   outline: none;
@@ -845,11 +755,7 @@ footer .btn {
   padding: 18px 40px;
   font-size: 16px;
   color: #f1f1f1;
-  background: linear-gradient(
-    to right,
-    rgba(239, 102, 34, 1),
-    rgba(12, 64, 121, 1)
-  );
+  background: linear-gradient(to right, #ffda78, #003285);
   border: none;
   font-weight: 700;
   outline: none;
@@ -936,7 +842,6 @@ footer .btn:hover {
   color: #92999f;
   font-size: 14px;
   font-weight: normal;
-  margin: 0px;
 }
 
 .footer .footer-about span {
@@ -1053,4 +958,82 @@ footer .btn:hover {
   .feedbox form .fname {
     width: 100%;
   }
+}
+
+/*Contact Us Section*/
+.csec {
+  background: linear-gradient(to right, #ffda78, #003285);
+  background-attachment: fixed;
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 200px;
+  content: "";
+  transform-origin: top right;
+  transform: skewY(-10deg);
+  z-index: -1;
+}
+.back-contact {
+  margin-top: 0px;
+  transform: translateY(-50px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cc {
+  height: 400px;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  justify-content: center;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+  background: #fff;
+}
+.cc form {
+  margin: 5%;
+  margin-top: 40px;
+  width: 90%;
+  height: 90%;
+}
+.cc form label {
+  position: absolute;
+  color: #2e3d49;
+  font-size: 10px;
+  font-weight: 800;
+}
+.cc form input {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px lightgray;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  color: #2e3d49;
+  font-weight: 600;
+}
+.imp {
+  color: red;
+}
+form textarea {
+  width: 100%;
+  height: 100px;
+  box-shadow: inset 0 0 5px lightgray;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  outline: none;
+  color: #2e3d49;
+  font-weight: 600;
+  padding: 15px;
+}
+#csubmit {
+  margin-top: 20px;
+  background: linear-gradient(to right, #ffda78, #003285);
+  border-radius: 5px;
+  border-style: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
 }
