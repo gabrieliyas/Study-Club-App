@@ -24,15 +24,15 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 nav {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   top: 0;
   position: fixed;
   display: flex;
   width: 100%;
   z-index: 1000;
   background: #fff;
-  justify-content: space-around;
+  justify-content: space-evenly;
   transition: 1.5s;
   align-items: center;
 }
@@ -93,7 +93,7 @@ nav ul li a:hover {
   background: #000000;
 }
 .logo img {
-  width: 105px;
+  width: 100px;
   cursor: pointer;
   transition: all 1s;
 }
@@ -298,7 +298,7 @@ button {
 
 /*Title*/
 .title {
-  margin-top: 0px;
+  margin-top: 70px;
   font-family: "Sora", sans-serif;
   font-size: 30px;
   text-align: center;
@@ -316,7 +316,7 @@ button {
 }
 .about-content .side-text {
   width: 550px;
-  padding: 50px 40px;
+  padding: 40px 40px;
   background: #fff;
   box-shadow: 2px 0 100px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -370,14 +370,18 @@ button {
   width: 250px;
   padding: 28px;
   border-radius: 10px;
-  border: 1px solid #fa4b37;
+  border: 1px solid rgba(239, 102, 34, 1);
   font-size: 15px;
   color: #272529;
   font-family: cursive;
   text-decoration: none;
 }
 .cbox .det a:hover {
-  background: linear-gradient(to right, #fa4b37, #df2771);
+  background: linear-gradient(
+    to right,
+    rgba(239, 102, 34, 1),
+    rgba(12, 64, 121, 1)
+  );
   color: white;
 }
 .cbox .det a:hover img {
@@ -519,7 +523,11 @@ button {
 
 /*Contact Us Section*/
 .csec {
-  background: linear-gradient(to right, #fa4b37, #df2771);
+  background: linear-gradient(
+    to right,
+    rgba(239, 102, 34, 1),
+    rgba(12, 64, 121, 1)
+  );
   background-attachment: fixed;
   position: absolute;
   width: 100%;
@@ -584,7 +592,11 @@ form textarea {
 }
 #csubmit {
   margin-top: 20px;
-  background: linear-gradient(to right, #fa4b37, #df2771);
+  background: linear-gradient(
+    to right,
+    rgba(239, 102, 34, 1),
+    rgba(12, 64, 121, 1)
+  );
   border-radius: 5px;
   border-style: none;
   outline: none;
@@ -749,7 +761,11 @@ form textarea {
 }
 .feed #csubmit {
   margin-top: 25px;
-  background: linear-gradient(to right, #fa4b37, #df2771);
+  background: linear-gradient(
+    to right,
+    rgba(239, 102, 34, 1),
+    rgba(12, 64, 121, 1)
+  );
   border-radius: 5px;
   border-style: none;
   outline: none;
@@ -829,7 +845,11 @@ footer .btn {
   padding: 18px 40px;
   font-size: 16px;
   color: #f1f1f1;
-  background: linear-gradient(to right, #fa4b37, #df2771);
+  background: linear-gradient(
+    to right,
+    rgba(239, 102, 34, 1),
+    rgba(12, 64, 121, 1)
+  );
   border: none;
   font-weight: 700;
   outline: none;
@@ -984,7 +1004,6 @@ footer .btn:hover {
   }
   .logo {
     transition: 1s;
-    margin-left: 30%;
   }
   nav ul,
   .srch,
