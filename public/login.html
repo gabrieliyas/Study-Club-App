@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link
-      rel="shortcut icon"
-      type="png"
-      href="../public/images/logo baru hima.png"
-    />
-    <title>Login SignUp</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../public/css/loginStyle.css"
-    />
+    <link rel="shortcut icon" type="png" href="/images/logo baru hima.png"/>
+    <title>Daftar Baru atau Masuk</title>
+    <link rel="stylesheet" type="text/css" href="/css/loginstyle.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- It will redirect to the Home Page after submitting the form -->
     <script>
       $(document).ready(function () {
-        $("form").submit(function () {
-          alert("Great Job !");
+        $("form").submit(function (event) {
+          event.preventDefault(); // Prevent default form submission
+          window.location.href = "/"; // Redirect to index.ejs route
         });
       });
+
+      function login() {
+        document.getElementById("login").style.left = "50px";
+        document.getElementById("register").style.left = "450px";
+        document.getElementById("btn").style.left = "0";
+        document.querySelector(".other").style.display = "block";
+      }
+
+      function register() {
+        document.getElementById("login").style.left = "-400px";
+        document.getElementById("register").style.left = "50px";
+        document.getElementById("btn").style.left = "110px";
+        document.querySelector(".other").style.display = "none";
+      }
     </script>
   </head>
   <body>
@@ -34,10 +41,16 @@
           onclick="login()"
           style="color: #fff"
         >
-          Log In
+          Masuk
         </button>
-        <button type="button" class="toggle-btn" id="reg" onclick="register()">
-          Register
+        <button 
+          type="button" 
+          class="toggle-btn" 
+          id="reg" 
+          onclick="register()"
+          style="color: #fff"
+        >
+          Daftar
         </button>
       </div>
       <div class="social-icons">
@@ -47,66 +60,77 @@
       </div>
 
       <!-- Login Form -->
-      <form id="login" class="input-group" action="index.html">
+      <form id="login" class="input-group" action="/">
         <div class="inp">
-          <img src="images/icon/user.png" /><input
+          <img src="images/icon/user.png" />
+          <input
             type="text"
             id="email"
             class="input-field"
-            placeholder="Username or Phone Number"
+            placeholder="Pos-el"
             style="width: 88%; border: none"
+            autocomplete="off"
             required="required"
           />
         </div>
         <div class="inp">
-          <img src="images/icon/password.png" /><input
+          <img src="images/icon/password.png" />
+          <input
             type="password"
             id="password"
             class="input-field"
-            placeholder="Password"
+            placeholder="Kata Sandi"
             style="width: 88%; border: none"
+            autocomplete="off"
             required="required"
           />
         </div>
-        <input type="checkbox" class="check-box" />Remember Password
-        <button type="submit" class="submit-btn">Log In</button>
+        <input type="checkbox" class="check-box" />Ingat kata sandi
+        <button type="submit" class="submit-btn">Masuk</button>
       </form>
 
-      <div class="other" id="other">
+      <!-- <div class="other" id="other">
         <div class="instead">
-          <h3>or</h3>
+          <h3>atau</h3>
         </div>
         <button class="connect" onclick="google()">
-          <img src="images/icon/google.png" /><span>Sign in with Google</span>
+          <img src="images/icon/google.png" /><span>Masuk dengan Google</span>
         </button>
-      </div>
+      </div> -->
 
       <!-- Registration Form -->
-      <form id="register" class="input-group">
+      <form id="register" class="input-group" action="/">
         <input
           type="text"
+          id="full-name"
           class="input-field"
-          placeholder="Full Name"
+          placeholder="Nama Lengkap"
+          autocomplete="off"
           required="required"
         />
         <input
           type="email"
+          id="reg-email"
           class="input-field"
-          placeholder="Email Address"
+          placeholder="Alamat Pos-el"
+          autocomplete="off"
+          required="required"
+        />
+        <input
+          type="password"
+          id="reg-password"
+          class="input-field"
+          placeholder="Kata Sandi"
+          name="psame"
+          autocomplete="off"
           required="required"
         />
         <input
           type="password"
           class="input-field"
-          placeholder="Create Password"
+          placeholder="Konfirmasi Kata Sandi"
           name="psame"
-          required="required"
-        />
-        <input
-          type="password"
-          class="input-field"
-          placeholder="Confirm Password"
-          name="psame"
+          autocomplete="off"
           required="required"
         />
         <input
@@ -114,12 +138,12 @@
           class="check-box"
           id="chkAgree"
           onclick="goFurther()"
-        />I agree to the Terms & Conditions
+        />Saya menyetujui Syarat & Ketentuan
         <button type="submit" id="btnSubmit" class="submit-btn reg-btn">
-          Register
+          Daftarkan
         </button>
       </form>
     </div>
-    <script type="text/javascript" src="../public/js/script.js"></script>
+    <script type="text/javascript" src="js/loginscript.js"></script>
   </body>
 </html>

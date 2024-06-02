@@ -1,35 +1,24 @@
-// const container = document.getElementById("container");
-// const registerBtn = document.getElementById("register");
-// const loginBtn = document.getElementById("login");
+const db = require("../routes/db-config");
+const bcrypt = require("bcryptjs");
 
-// registerBtn.addEventListener("click", () => {
-//   container.classList.add("active");
+const register = async (req, res) => {
+    const {email, password:Npassword} = req.body
 
-//   const register = {
-//     email: email.value,
-//     password: password.value
-//   }
-
-//   fetch("/api/register", {
-//     method: "POST",
-//     body: JSON.stringify(register),
-//     headers: {
-//       "Content-Type": "application/json"
-//     }
-//   }).then(res => res.json())
-//   .then(data => {
-//     if (data.status == "error") {
-//       success.style.display = "none"
-//       error.style.display = "block"
-//       error.innerText = data.error
-//     } else {
-//       error.style.display = "none"
-//       success.style.display = "block"
-//       error.InnerText = data.error
-//     }
-//   })
-// });
-
-// loginBtn.addEventListener("click", () => {
-//   container.classList.remove("active");
-// });
+    if (!email || !Npassword) return res.json({status:"error", error: "Tolong masukkan pos-el dan kata sandi Anda"});
+    else {
+        console.log(email);
+        db.query('SELECT email FROM users WHERE email = ?', [email], async(err, result) => {
+            if (err) throw err;
+            if (result[0]) return res.json({status: "error", error: "Pos-el sudah terdaftar"});
+            else {
+                const password = bcrypt.hash(Npassword, 8);
+                console.log(password);
+                db.query('INSERT INTO users SET ?', {email:email, password:password}, (error, results) => {
+                    if (error) throw error;
+                    return res.json({status: "success", success: "Anda telah terdaftar"});
+                })
+            }
+        })
+    }
+}
+module.exports = register;

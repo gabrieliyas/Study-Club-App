@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const success = document.getElementById("success");
   const error = document.getElementById("error");
 
+  // Register
   registerBtn.addEventListener("click", () => {
     container.classList.add("active");
   
@@ -75,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Login  
   loginBtn.addEventListener("click", () => {
     container.classList.remove("active");
   

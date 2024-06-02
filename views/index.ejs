@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="shortcut icon" type="png" href="../public/images/logo baru hima.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo baru hima.png" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
     <title>Study Club App</title>
     <meta name="desciption" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="../public/js/script.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
       $(window).on("scroll", function () {
@@ -31,7 +31,11 @@
     <!-- Navigation Bar -->
     <header id="header">
       <nav>
-        <div class="logo"><img src="../public/images/logo baru hima.png" alt="logo" /></div>
+        <div class="logo">
+          <a href="http://localhost:5000/">
+            <img src="/images/logo baru hima.png" alt="logo" width="75" height="75"/>
+          </a>
+        </div>
         <div class="logo-text">
           <span style="color: #FF7F3E">STUDY</span>
           <span style="color: #003285">CLUB APP</span>
@@ -45,14 +49,14 @@
         </ul>
         <div class="srch">
           <input type="text" class="search" placeholder="Cari di sini..." /><img
-            src="../public/images/icon/search.png"
+            src="/images/icon/search.png"
             alt="search"
             onclick="slide()"
           />
         </div>
-        <a class="get-started" href="../public/login.html">Daftar Baru atau Masuk</a>
+        <a class="get-started" href="/login.html">Daftar Baru atau Masuk</a>
         <img
-          src="../public/images/icon/menu.png"
+          src="/images/icon/menu.png"
           class="menu"
           onclick="sideMenu(0)"
           alt="menu"
@@ -60,33 +64,30 @@
       </nav>
       <div class="head-container">
         <div class="quote">
-          <span style="font-family: Kadwa, sans-serif; color: #003285"
-            >STUDY CLUB</span
-          ><br />
-          <span style="font-family: Kadwa, sans-serif; color: #FF7F3E;">APP</span> <br />
+          <span style="font-family:Impact, sans-serif; color: #003285;">STUDY CLUB</span><br />
+          <span style="font-family:Impact, sans-serif; color: #FF7F3E;">APP</span><br />
           <div class="hero-subtitle">
             <span style="font-family: 'Open Sans'; color: #2A629A">Menggali Potensi dengan Berkolaborasi</span>
           </div>
-          <div class="play">
-            <img src="../public/images/icon/play.png" alt="play" /><span
+          <!-- <div class="play">
+            <img src="/images/icon/play.png" alt="play" /><span
               ><a
                 href="https://www.youtube.com/watch?v=evjVo-ysR34&t=33s"
                 target="_blank"
                 >Watch Now</a
-              ></span
-            >
-          </div>
+              ></span>
+          </div> -->
         </div>
         <div class="svg-image">
-          <img src="../public/images/extra/svg1.jpg" alt="svg" />
+          <img src="/images/extra/svg1.jpg" alt="svg" />
         </div>
       </div>
       <div class="side-menu" id="side-menu">
         <div class="close" onclick="sideMenu(1)">
-          <img src="../public/images/icon/close.png" alt="" />
+          <img src="/images/icon/close.png" alt="" />
         </div>
         <div class="user">
-          <img src="../public/images/Logo Kabinet24 (1).png" alt="Username" />
+          <img src="/images/Logo Kabinet24 (1).png" alt="Username" />
           <p>Admin</p>
         </div>
         <ul>
@@ -95,32 +96,32 @@
           <li><a href="#services_section">Learning Centre</a></li>
           <li><a href="#about_section">Tentang</a></li>
           <li><a href="#contactus_section">Kontak</a></li>
-          <li><a href="#feedBACK">Umpan Balik</a></li>
+          <li><a href="#feedback">Umpan Balik</a></li>
         </ul>
       </div>
     </header>
 
     <!-- Some Popular Subjects -->
     <div class="title" id="subject_section">
-      <span>Choose Your Interest</span>
+      <span>Pilih Minat Anda</span>
     </div>
     <br /><br />
     <div class="course">
       <center>
         <div class="cbox">
           <div class="det">
-            <a href="../public/subjects/jee.html"
-              ><img src="../public/images/artificial-intelligence_900961.png" />Intelligent Device</a
+            <a href="/subjects/jee.html"
+              ><img src="/images/artificial-intelligence_900961.png" />Intelligent Device</a
             >
           </div>
           <div class="det">
-            <a href="../public/subjects/gate.html"
-              ><img src="../public/images/component_14728622.png" />Embeddded System</a
+            <a href="/subjects/gate.html"
+              ><img src="/images/component_14728622.png" />Embeddded System</a
             >
           </div>
           <div class="det">
-            <a href="../public/subjects/jee.html#sample_papers"
-              ><img src="../public/images/wireless_11390613.png" />Network & Security</a
+            <a href="/subjects/jee.html#sample_papers"
+              ><img src="/images/wireless_11390613.png" />Network & Security</a
             >
           </div>
         </div>
@@ -128,15 +129,21 @@
 
     <!-- ABOUT -->
     <div class="diffSection" id="about_section">
-      <center><p style="font-size: 50px; padding: 100px">About</p></center>
+      <center><p style="font-size: 50px; padding: 100px">Tentang</p></center>
       <div class="about-content">
         <div class="side-image">
-          <img class="sideImage" src="../public/images/Desain tanpa judul.jpg" />
+          <img class="sideImage" src="/images/Desain tanpa judul.jpg" />
         </div>
         <div class="side-text">
           <h2>Study Club App</h2>
           <p>
-            Website study club adalah platform online yang dirancang untuk mendukung kegiatan belajar kelompok atau klub belajar, memfasilitasi komunikasi, kolaborasi, dan akses ke sumber daya belajar. Fitur utama biasanya mencakup forum diskusi untuk mengajukan pertanyaan dan berbagi informasi, repository materi belajar untuk mengunggah dan mengunduh dokumen, kalender acara untuk menjadwalkan pertemuan dan kegiatan, ruang virtual untuk pertemuan online, serta sistem manajemen tugas dan penilaian. Selain itu, website ini juga sering menyediakan fitur untuk berbagi catatan, mengadakan kuis, dan berkolaborasi dalam proyek, sehingga anggota dapat belajar lebih efektif dan terorganisir.
+            Aplikasi Study Club adalah platform daring yang dirancang untuk mendukung kegiatan belajar kelompok atau 
+            klub belajar, memfasilitasi komunikasi, kolaborasi, dan akses ke sumber pembelajaran. 
+            Fitur utamanya mencakup forum diskusi untuk mengajukan pertanyaan dan berbagi informasi, 
+            repositori materi belajar untuk mengunggah dan mengunduh dokumen, kalender untuk menjadwalkan pertemuan dan kegiatan, 
+            ruang virtual untuk pertemuan daring, serta sistem manajemen tugas dan penilaian. 
+            Selain itu, aplikasi ini juga menyediakan fitur untuk berbagi catatan, mengadakan kuis, dan berkolaborasi dalam proyek 
+            sehingga pengguna dapat belajar lebih efektif dan terorganisir.
           </p>
         </div>
       </div>
@@ -158,40 +165,40 @@
           </p>
         </center>
       </div>
-      <a href="../public/services/computer_courses.html"
+      <a href="/services/computer_courses.html"
         ><div class="s-card">
-          <img src="../public/images/icon/computer-courses.png" />
+          <img src="/images/icon/computer-courses.png" />
           <p>KURSUS GRATIS</p>
         </div></a
       >
-      <a href="../public/services/jee.html"
+      <a href="/services/jee.html"
         ><div class="s-card">
-          <img src="../public/images/icon/brainbooster.png" />
+          <img src="/images/icon/brainbooster.png" />
           <p>FORUM KOMUNITAS</p>
         </div></a
       >
-      <a href="../public/services/samplepaper.html"
+      <a href="/services/samplepaper.html"
         ><div class="s-card">
-          <img src="../public/images/icon/papers.jpg" />
+          <img src="/images/icon/papers.jpg" />
           <p>CONTOH DAN REFERENSI JURNAL</p>
         </div></a
       >
-      <a href="../public/subjects/conversation.html"
+      <a href="/subjects/conversation.html"
         ><div class="s-card">
-          <img src="../public/images/icon/discussion.png" />
-          <p>DISKUSI DENGAN PELAJAR</p>
+          <img src="/images/icon/discussion.png" />
+          <p>DISKUSI BERSAMA</p>
         </div></a
       >
-      <a href="../public/subjects/quiz.html"
+      <a href="/subjects/quiz.html"
         ><div class="s-card">
-          <img src="../public/images/icon/q1.png" />
-          <p>QUIZ TEST IQ</p>
+          <img src="/images/icon/q1.png" />
+          <p>KUIS</p>
         </div></a
       >
-      <a href="../public/subjects/project.html"
+      <a href="/subjects/project.html"
         ><div class="s-card">
-          <img src="../public/images/icon/pngwing.com (1).png" />
-          <p>CARI PROJEK</p>
+          <img src="/images/icon/pngwing.com (1).png" />
+          <p>CARI PROYEK</p>
         </div></a
       >
     </div>
@@ -206,33 +213,31 @@
       onmouseover="this.stop()"
       onmouseout="this.start()"
       scrollamount="20"
-      ><div class="marqu">"HIMA TEKKOM PRESENT.”</div></marquee
+      ><div class="marqu">"MENGGALI POTENSI DENGAN BERKOLABORASI”</div></marquee
     >
 
     <!-- CONTACT US -->
 	<div class="diffSection" id="contactus_section">
-		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<center><p style="font-size: 50px; padding: 100px">Hubungi Kami</p></center>
 		<div class="csec"></div>
 		<div class="back-contact">
 			<div class="cc">
-			<form action="mailto:tekom_cibiru@upi.edu.com" method="post" enctype="text/plain ">
-				<label>Username <span class="imp">*</span></label><br>
+			<form action="mailto:himatekkom@upi.edu" method="post" enctype="text/plain ">
+				<label>Nama Pengguna <span class="imp">*</span></label><br>
 				<center>
-				<input type="text" name="" style="width: 100%" required="required" placeholder="Can be Anonymus..."><br>
+				<input type="text" name="" style="width: 100%" required="required" placeholder="Dapat berupa Anonim..."><br>
 				</center>
-				<label>Email <span class="imp">*</span></label><br>
+				<label>Pos-el <span class="imp">*</span></label><br>
 				<input type="email" name="mail" style="width: 100%" required="required"><br>
-				<label>Message <span class="imp">*</span></label><br>
+				<label>Pesan <span class="imp">*</span></label><br>
 				<input type="text" name="message" style="width: 100%" required="required"><br>
-				<label>Additional Details</label><br>
+				<label>Keterangan Tambahan</label><br>
 				<textarea name="addtional"></textarea><br>
-				<button type="submit" id="csubmit">Send Message</button>
+				<button type="submit" id="csubmit">Kirimkan Pesan</button>
 			</form>
 			</div>
 		</div>
 	</div>
-
-    
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -250,9 +255,7 @@
       <div class="footer-center">
           <div>
               <i class="fa fa-map-marker"></i>
-              <p><span>Indonesia</span> Jl. Raya Cibiru Km. 15 Bandung
-
-              </p>
+              <p><span>Indonesia</span> Jl. Raya Cibiru Km. 15 Bandung</p>
           </div>
           <div>
               <i class="fa fa-phone"></i>
@@ -266,7 +269,7 @@
   
       <div class="footer-right">
           <p class="footer-about">
-              <span>About</span>
+              <span>Tentang Kami</span>
               Teknik Komputer UPI merupakan program studi Teknik Komputer 
               pertama untuk jenjang S1 di Jawa Barat yang ada di Perguruan Tinggi Negeri.
           </p>
