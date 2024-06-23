@@ -20,11 +20,11 @@ body {
   width: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #fa4b37;
+  background: rgba(239, 102, 34, 1);
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #df2771;
+  background: rgba(239, 102, 34, 1);
 }
 
 /*NAVIGATION BAR*/
@@ -73,7 +73,7 @@ button {
 }
 
 .nav ul li a:hover {
-  color: #fa4b37;
+  color: rgba(239, 102, 34, 1);
 }
 
 .nav button {
@@ -104,7 +104,7 @@ button {
   width: 300px;
   border: none;
   outline: none;
-  border-bottom: 2px solid #fa4b37;
+  border-bottom: 2px solid rgba(239, 102, 34, 1);
   padding: 9px;
 }
 .nav .search button {
@@ -115,6 +115,7 @@ button {
 .nav .switch-tab {
   cursor: pointer;
   visibility: hidden;
+  align-items: center;
 }
 .nav .switch-tab img {
   width: 20px;
@@ -429,7 +430,7 @@ footer {
   }
 
   header {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 }
 
@@ -460,7 +461,7 @@ footer .btn {
   padding: 18px 40px;
   font-size: 16px;
   color: #f1f1f1;
-  background: linear-gradient(to right, #fa4b37, #df2771);
+  background: linear-gradient(to right, #ffda78, #003285);
   border: none;
   font-weight: 700;
   outline: none;
@@ -547,7 +548,6 @@ footer .btn:hover {
   color: #92999f;
   font-size: 14px;
   font-weight: normal;
-  margin: 0px;
 }
 
 .footer .footer-about span {
