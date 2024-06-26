@@ -11,7 +11,7 @@ const register = async (req, res) => {
             if (err) throw err;
             if (result[0]) return res.json({status: "error", error: "Pos-el sudah terdaftar"});
             else {
-                const password = bcrypt.hash(Npassword, 8);
+                const password = await bcrypt.hash(Npassword, 8);
                 console.log(password);
                 db.query('INSERT INTO users SET ?', {email:email, password:password}, (error, results) => {
                     if (error) throw error;
