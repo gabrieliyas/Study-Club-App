@@ -126,8 +126,8 @@ header .logo {
   margin-right: auto;
 }
 header .logo img {
-  width: 2rem;
-  height: 2rem;
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
 header,
@@ -225,6 +225,33 @@ aside .profile .about p {
 }
 aside .profile .about {
   margin-top: 1rem;
+}
+
+.sidebar-links {
+  margin-top: 20px;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-links a:hover {
+  background-color: #aab685;
+}
+
+.sidebar #btn {
+  position: absolute;
+  color: #f6f6f9;
+  top: 4rem;
+  left: 50%;
+  font-size: 1.2rem;
+  line-height: 50px;
+  transform: translate(-50%);
+  cursor: pointer;
 }
 
 /* Home Section  */

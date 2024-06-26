@@ -120,6 +120,11 @@ section {
   background-color: var(--red);
 }
 
+header .flex img {
+  width: 6rem;
+  height: 6rem;
+}
+
 .inline-btn:hover,
 .inline-option-btn:hover,
 .inline-delete-btn:hover,
@@ -156,6 +161,7 @@ section {
 .header .flex .logo {
   font-size: 2.5rem;
   color: var(--black);
+  margin-left: -100px;
 }
 
 .header .flex .search-form {
@@ -281,7 +287,7 @@ section {
   background-color: var(--black);
 }
 
-.side-bar .profile {
+.side- .profile {
   padding: 3rem 2rem;
   text-align: center;
 }

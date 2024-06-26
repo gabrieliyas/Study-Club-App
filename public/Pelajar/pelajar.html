@@ -14,9 +14,12 @@
   </head>
   <body>
     <header>
-      <div class="logo" title="University Management System">
+      <div class="logo" title="Study Club App">
         <img src="/images/logo baru hima.png" alt="" />
-        <h2>Study<span class="danger">Club</span>App</h2>
+        <h2>
+          <span style="color: #ff7f3e">Study</span>
+          <span style="color: #003285">Club App</span>
+        </h2>
       </div>
       <div class="navbar">
         <a href="../Pelajar/pelajar.html" class="active">
@@ -35,7 +38,7 @@
           <span class="material-icons-sharp">password</span>
           <h3>Change Password</h3>
         </a>
-        <a href="#">
+        <a href="http://localhost:5000/">
           <span class="material-icons-sharp" onclick="">logout</span>
           <h3>Logout</h3>
         </a>
@@ -57,20 +60,38 @@
             </div>
             <div class="info">
               <p>Hey, <b>Alex</b></p>
-              <small class="text-muted">12102030</small>
+              <small class="text-muted">Pelajar</small>
             </div>
           </div>
-          <div class="about">
-            <h5>Course</h5>
-            <p>BTech. Computer Science & Engineering</p>
-            <h5>DOB</h5>
-            <p>29-Feb-2020</p>
-            <h5>Contact</h5>
-            <p>1234567890</p>
-            <h5>Email</h5>
-            <p>unknown@gmail.com</p>
-            <h5>Address</h5>
-            <p>Ghost town Road, New York, America</p>
+          <div class="sidebar-links">
+            <a href="../Pelajar/pelajar.html" class="active">
+              <span class="material-icons-sharp">home</span>
+              <h3>Beranda</h3>
+            </a>
+            <a href="timetable.html" onclick="timeTableAll()">
+              <span class="material-icons-sharp">school</span>
+              <h3>Kursus</h3>
+            </a>
+            <a href="exam.html">
+              <span class="material-icons-sharp">groups</span>
+              <h3>Komunitas</h3>
+            </a>
+            <a href="password.html">
+              <span class="material-icons-sharp">description</span>
+              <h3>Jurnal</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp" onclick="">chat</span>
+              <h3>Diskusi</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp" onclick="">quiz</span>
+              <h3>Kuis</h3>
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp" onclick="">add_task</span>
+              <h3>Proyek</h3>
+            </a>
           </div>
         </div>
       </aside>
