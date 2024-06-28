@@ -1,0 +1,97 @@
+// create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Muhammad Taufik Dwi Putra",
+    "email": "tdputra@upi.edu",
+    "password": "tdputra",
+    "confPassword": "tdputra",
+    "role": "pengajar"
+}
+
+###
+// get all users
+GET http://localhost:5000/users
+
+###
+// get a single user
+GET http://localhost:5000/users/c6a05016-05e9-4552-b559-43d2783ee370
+
+###
+// update a user
+PATCH http://localhost:5000/users/c6a05016-05e9-4552-b559-43d2783ee370
+Content-Type: application/json
+
+{
+    "name": "Muhammad Taufik Dwi Putra",
+    "email": "tdputra@upi.edu",
+    "password": "tdputra",
+    "confPassword": "tdputra",
+    "role": "pengajar"
+}
+
+###
+// delete a user
+DELETE http://localhost:5000/users/c6a05016-05e9-4552-b559-43d2783ee370
+
+### 
+// user login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@admin.com",
+    "password": "AdminClub2024"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "tdputra@upi.edu",
+    "password": "tdputra"
+}
+
+###
+// user logged in
+GET http://localhost:5000/me
+
+###
+// user logout
+DELETE http://localhost:5000/logout
+
+// Products
+
+# ###
+# // get all products
+# GET http://localhost:5000/products
+
+# ###
+# // get a single product
+# GET http://localhost:5000/products/id
+
+# ###
+# // POST products data
+# POST http://localhost:5000/products
+# Content-Type: application/json
+
+# {
+#     "email": "Produk 1",
+#     "price": 20.000
+# }
+
+# ###
+# // POST products data
+# PATCH http://localhost:5000/products/id
+# Content-Type: application/json
+
+# {
+#     "email": "Produk 1",
+#     "price": 20.000
+# }
+
+# ###
+# // delete products data
+# DELETE http://localhost:5000/products/id
