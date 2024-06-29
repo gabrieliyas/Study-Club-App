@@ -87,22 +87,7 @@
         </div>
         <input type="checkbox" class="check-box" />Ingat kata sandi
         <button type="submit" class="submit-btn">Masuk</button>
-        <div class="register-link">
-          <p>
-            Apakah kamu seorang
-            <a href="register.html">Pengajar?</a>
-          </p>
-        </div>
       </form>
-
-      <!-- <div class="other" id="other">
-        <div class="instead">
-          <h3>atau</h3>
-        </div>
-        <button class="connect" onclick="google()">
-          <img src="images/icon/google.png" /><span>Masuk dengan Google</span>
-        </button>
-      </div> -->
 
       <!-- Registration Form -->
       <form id="register" class="input-group" action="/">
@@ -138,7 +123,28 @@
           name="psame"
           autocomplete="off"
           required="required"
+          style="margin-bottom: 20px"
         />
+
+        <!-- Dropdown Daftar sebagai -->
+        <label
+          for="user-role"
+          class="input-field"
+          style="width: 100%; text-align: left; margin-bottom: 10px"
+          >Daftar sebagai</label
+        >
+        <div class="select-container">
+          <select
+            id="user-role"
+            class="input-field user-role-select"
+            required="required"
+            style="margin-top: 10px"
+          >
+            <option value="Pelajar">Pelajar</option>
+            <option value="Pengajar">Pengajar</option>
+          </select>
+        </div>
+
         <input
           type="checkbox"
           class="check-box"

@@ -47,61 +47,88 @@ document.addEventListener("DOMContentLoaded", () => {
   const success = document.getElementById("success");
   const error = document.getElementById("error");
 
+  const dropdowns = document.querySelectorAll("dropdown");
+  dropdowns.forEach((dropdown) => {
+    const select = dropdown.querySelector("select");
+    const caret = dropdown.querySelector("caret");
+    const options = dropdown.querySelector("option");
+    const menuItems = dropdown.querySelectorAll("menu li");
+    const selectedOptions = dropdown.querySelector("selected");
+
+    select.addEventListener("click", () => {
+      select.classlist.toogle("select-clicked");
+      caret.classList.toogle("caret-rotate");
+      menuItems.forEach((item) => item.classList.toogle("menu-open"));
+    });
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        selectedOptions.innerText = option.innerText;
+        selected.classList.remove("select-clicked");
+        caret.classlist.remove("caret-rotate");
+        menuItems.forEach((item) => item.classlist.remove("menu-open"));
+        option.classList.add("active");
+      });
+    });
+  });
+
   // Register
   registerBtn.addEventListener("click", () => {
     container.classList.add("active");
-  
+
     const register = {
       email: emailInput.value,
-      password: passwordInput.value
+      password: passwordInput.value,
     };
 
     fetch("/api/register", {
       method: "POST",
       body: JSON.stringify(register),
       headers: {
-        "Content-Type": "application/json"
-      }
-    }).then(res => res.json())
-    .then(data => {
-      if (data.status === "error") {
-        success.style.display = "none";
-        error.style.display = "block";
-        error.innerText = data.error;
-      } else {
-        error.style.display = "none";
-        success.style.display = "block";
-        success.innerText = data.success;
-      }
-    });
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "error") {
+          success.style.display = "none";
+          error.style.display = "block";
+          error.innerText = data.error;
+        } else {
+          error.style.display = "none";
+          success.style.display = "block";
+          success.innerText = data.success;
+        }
+      });
   });
 
-  // Login  
+  // Login
   loginBtn.addEventListener("click", () => {
     container.classList.remove("active");
-  
+
     const login = {
       email: emailInput.value,
-      password: passwordInput.value
+      password: passwordInput.value,
     };
-  
+
     fetch("/api/login", {
       method: "POST",
       body: JSON.stringify(login),
       headers: {
-        "Content-Type": "application/json"
-      }
-    }).then(res => res.json())
-    .then(data => {
-      if (data.status === "error") {
-        success.style.display = "none";
-        error.style.display = "block";
-        error.innerText = data.error;
-      } else {
-        error.style.display = "none";
-        success.style.display = "block";
-        success.innerText = data.success;
-      }
-    });
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "error") {
+          success.style.display = "none";
+          error.style.display = "block";
+          error.innerText = data.error;
+        } else {
+          error.style.display = "none";
+          success.style.display = "block";
+          success.innerText = data.success;
+        }
+      });
   });
 });

@@ -61,7 +61,7 @@ body {
 }
 .form-box {
   width: 380px;
-  height: 490px;
+  height: 570px;
   position: relative;
   margin: 6% auto;
   background: #fff8;
@@ -145,6 +145,113 @@ body {
   background: transparent;
   color: rgba(0, 0, 0);
 }
+
+.user-role {
+  min-width: 15em;
+  position: relative;
+  margin: 2em;
+}
+
+.user-role * {
+  box-sizing: border-box;
+}
+
+.user-role-select {
+  background: linear-gradient(to right, #ffda78, #003285);
+  color: #ffda78;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  border: 2px #2a2f3b solid;
+  border-radius: 0.5rem;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+}
+
+.user-role-select::-ms-expand {
+  display: none;
+  border: 2px solid #000;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container::after {
+  font-size: 0.7em;
+  color: #ffda78;
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.selected-clicked {
+  border: 2px #26489a solid;
+  box-shadow: 0 0 0.8rem #26489a;
+}
+
+.selected:hover {
+  background: #ccff00;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition: 0.3s;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.option {
+  list-style: none;
+  padding: 0.2rem 0.5rem;
+  background: #ccff00;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.option li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.option li:hover {
+  background: #2a2d35;
+}
+
+.active {
+  background: #23242a;
+}
+
+.option-open {
+  display: block;
+  opacity: 1;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(0, 0, 0, 0.7);
